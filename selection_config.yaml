@@ -1,0 +1,38 @@
+# Selection config for combining specific LeRobot datasets into Cosmos format
+# This file specifies which datasets to include in the combined output
+
+# Output folder name for the combined dataset
+output_folder: "cosmos_predict2_video2world_dataset"
+
+# Default camera view to use (can be overridden per dataset)
+camera_view: "front"
+
+# List of datasets to include in the combined output
+selected_datasets:
+  # Simple format: just dataset name (uses default camera_view)
+  - "youliangtan/so101-table-cleanup"
+  - "lipsop/so101-block-in-bin-100ep"
+  
+  # Advanced format: specify per-dataset settings
+  - name: "c299m/so101-pen-in-box-v2"
+    camera_view: "front"
+  
+  - name: "observabot/so101_die_mat3"
+    camera_view: "top"
+  
+  - name: "zacapa/SO101_cube_test"
+    camera_view: "overhead"
+  
+  # Add more datasets as needed
+  # - "wangranryan/so101_paper"
+  # - "HuoYixiao/so101_test"
+
+# Optional: Metadata about the combined dataset
+metadata:
+  description: "Combined SO-101 manipulation tasks for Cosmos video2world training"
+  total_expected_episodes: "~500"  # Approximate total
+  tasks:
+    - "Object manipulation"
+    - "Pick and place"
+    - "Table cleanup"
+    - "Container tasks" 
