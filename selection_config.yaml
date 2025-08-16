@@ -7,18 +7,21 @@ output_folder: "cosmos_predict2_video2world_dataset"
 # Default camera view to use (can be overridden per dataset)
 camera_view: "front"
 
+# Minimum number of frames required for a video to be included (default: 10)
+min_frames: 120
+
 # List of datasets to include in the combined output
 selected_datasets:
   # Simple format: just dataset name (uses default camera_view)
-  - "youliangtan/so101-table-cleanup"
-  - "lipsop/so101-block-in-bin-100ep"
+  # - "youliangtan/so101-table-cleanup"
+  # - "lipsop/so101-block-in-bin-100ep"
   
   # Advanced format: specify per-dataset settings
-  - name: "c299m/so101-pen-in-box-v2"
-    camera_view: "front"
+  # - name: "c299m/so101-pen-in-box-v2"
+  #   camera_view: "front"
   
-  - name: "observabot/so101_die_mat3"
-    camera_view: "top"
+  # - name: "observabot/so101_die_mat3"
+  #   camera_view: "top"
   
   - name: "zacapa/SO101_cube_test"
     camera_view: "overhead"
